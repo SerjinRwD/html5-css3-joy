@@ -14,12 +14,57 @@
             }
 
             .pritty-hover {
-                transition: height 200ms;
+                transition: height 200ms, width 200ms, top 200ms, left 200ms;
                 transition-timing-function: linear;
             }
 
-            .pritty-hover-container:hover .pritty-hover {
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-center {
                 height: 0px;
+                width: 0px;
+                left: 50%;
+                top: 50%;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-up {
+                height: 0px;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-upleft {
+                height: 0px;
+                width: 0px;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-upright {
+                height: 0px;
+                width: 0px;
+                left: 100%;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-left {
+                width: 0px;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-right {
+                width: 0px;
+                left: 100%;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-down {
+                height: 0px;
+                top: 200px;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-downleft {
+                height: 0px;
+                width: 0px;
+                top: 200px;
+            }
+
+            .pritty-hover-container:hover .pritty-hover.pritty-flap-downright {
+                height: 0px;
+                width: 0px;
+                top: 200px;
+                left: 100%;
             }
 
         </style>
@@ -36,7 +81,7 @@
                         <div class="pritty-box">
                             Текст
                         </div>
-                        <div class="w3-display-topleft w3-red pritty-box pritty-hover" ></div>
+                        <div class="w3-display-topleft w3-red pritty-box pritty-hover pritty-flap-upleft" ></div>
                     </div>
                 </div>
                 <div class="w3-cell">
@@ -44,7 +89,7 @@
                         <div class="pritty-box">
                             Текст
                         </div>
-                        <div class="w3-display-topleft w3-green pritty-box pritty-hover"></div>
+                        <div class="w3-display-topleft w3-green pritty-box pritty-hover pritty-flap-up"></div>
                     </div>
                 </div>
                 <div class="w3-cell">
@@ -52,34 +97,7 @@
                         <div class="pritty-box">
                             Текст
                         </div>
-                        <div class="w3-display-topleft w3-yellow pritty-box pritty-hover" ></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w3-cell-row">
-                <div class="w3-cell">
-                    <div class="w3-display-container pritty-hover-container">
-                        <div class="pritty-box">
-                            Текст
-                        </div>
-                        <div class="w3-display-topleft w3-blue pritty-box pritty-hover"></div>
-                    </div>
-                </div>
-                <div class="w3-cell">
-                    <div class="w3-display-container pritty-hover-container">
-                        <div class="pritty-box">
-                            Текст
-                        </div>
-                        <div class="w3-display-topleft w3-indigo pritty-box pritty-hover" ></div>
-                    </div>
-                </div>
-                <div class="w3-cell">
-                    <div class="w3-display-container pritty-hover-container">
-                        <div class="pritty-box">
-                            Текст
-                        </div>
-                        <div class="w3-display-topleft w3-light-blue pritty-box pritty-hover"></div>
+                        <div class="w3-display-topleft w3-yellow pritty-box pritty-hover pritty-flap-upright" ></div>
                     </div>
                 </div>
             </div>
@@ -90,7 +108,7 @@
                         <div class="pritty-box">
                             Текст
                         </div>
-                        <div class="w3-display-topleft w3-pale-red pritty-box pritty-hover" ></div>
+                        <div class="w3-display-topleft w3-blue pritty-box pritty-hover pritty-flap-left"></div>
                     </div>
                 </div>
                 <div class="w3-cell">
@@ -98,7 +116,7 @@
                         <div class="pritty-box">
                             Текст
                         </div>
-                        <div class="w3-display-topleft w3-deep-orange pritty-box pritty-hover"></div>
+                        <div class="w3-display-topleft w3-indigo pritty-box pritty-hover pritty-flap-center" ></div>
                     </div>
                 </div>
                 <div class="w3-cell">
@@ -106,7 +124,34 @@
                         <div class="pritty-box">
                             Текст
                         </div>
-                        <div class="w3-display-topleft w3-pink pritty-box pritty-hover" ></div>
+                        <div class="w3-display-topleft w3-light-blue pritty-box pritty-hover pritty-flap-right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-cell-row">
+                <div class="w3-cell">
+                    <div class="w3-display-container pritty-hover-container">
+                        <div class="pritty-box">
+                            Текст
+                        </div>
+                        <div class="w3-display-topleft w3-pale-red pritty-box pritty-hover pritty-flap-downleft" ></div>
+                    </div>
+                </div>
+                <div class="w3-cell">
+                    <div class="w3-display-container pritty-hover-container">
+                        <div class="pritty-box">
+                            Текст
+                        </div>
+                        <div class="w3-display-topleft w3-deep-orange pritty-box pritty-hover pritty-flap-down"></div>
+                    </div>
+                </div>
+                <div class="w3-cell">
+                    <div class="w3-display-container pritty-hover-container">
+                        <div class="pritty-box">
+                            Текст
+                        </div>
+                        <div class="w3-display-topleft w3-pink pritty-box pritty-hover pritty-flap-downright" ></div>
                     </div>
                 </div>
             </div>
