@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .pritty-box {
+                min-height: 160px;
+            }
+
+            @keyframes pritty-blink-a {
+                0%   { opacity: 1; }
+                25%  { opacity: 0.25; }
+                50%  { opacity: 1; }
+                75%  { opacity: 0.25; }
+                100% { opacity: 1; }
+            }
+
+            @keyframes pritty-blink-b {
+                0%   { opacity: 1; }
+                50%  { opacity: 0; }
+                100% { opacity: 1; }
+            }
+
+            @keyframes pritty-pulsar-animation {
+                0%   { transform: scale(1, 1); }
+                20%  { transform: scale(1.105, 1.105); }
+                40%  { transform: scale(0.908, 0.908); }
+                60%  { transform: scale(1.109, 1.109); }
+                80%  { transform: scale(0.908, 0.908); }
+                100% { transform: scale(1, 1); }
+            }
+            @keyframes pritty-heart-animation {
+                from    { transform: scale(1.105, 1.105); }
+                to      { transform: scale(1, 1); }
+            }
+
+            .pritty-blink-hover-a:hover {
+                animation-name: pritty-blink-a;
+                animation-duration: 300ms;
+                animation-iteration-count: 1;
+            }
+
+            .pritty-blink-hover-b:hover {
+                animation-name: pritty-blink-b;
+                animation-duration: 150ms;
+                animation-iteration-count: 2;
+            }
+
+            .pritty-blink-hover-ia:hover {
+                animation-name: pritty-blink-a;
+                animation-duration: 300ms;
+                animation-iteration-count: infinite;
+            }
+
+            .pritty-pulsar {
+                transform-origin: 0% 0%;
+                text-shadow: 3px 3px black;
+
+                animation-name: pritty-pulsar-animation;
+                animation-duration: 1.2s;
+                animation-iteration-count: infinite;
+            }
+
+            .pritty-heart {
+                display: inline-block;
+                position: relative;
+                transform-origin: 50% 50%;
+
+                animation-name: pritty-heart-animation;
+                animation-duration: 750ms;
+                animation-iteration-count: infinite;
+            }
+
+            .pritty-heart .fa-heartbeat {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+        </style>
+    </head>
+    <body class="w3-dark-grey w3-padding">
+        <div class="w3-content w3-white">
+
+            <div class="w3-display-container w3-padding-small pritty-box">
+                Анимируем эту штуку...
+                <div class="w3-display-middle">
+                    <div class="w3-button w3-green pritty-blink-hover-a">
+                        Тыц
+                    </div>
+                    <div class="w3-button w3-green pritty-blink-hover-b">
+                        Тыц
+                    </div>
+                </div>
+
+            </div>
+            <div class="w3-red w3-padding-small">
+                <div class="pritty-pulsar">
+                    <p>Какой-то текст:</p>
+                    <ol>
+                        <li>Одно</li>
+                        <li>Второе</li>
+                        <li>Третье</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="w3-black w3-padding-64 w3-center">
+                <div class="pritty-heart">
+                    <i class="fa fa fa-heart w3-middle" style="font-size:48px;color:white"></i>
+                    <i class="fa fa fa-heartbeat w3-middle pritty-blink-hover-ia" style="font-size:48px;color:red"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
